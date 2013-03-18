@@ -1,7 +1,7 @@
 module.exports = load_odb
 
 var path = require('path')
-  , ls_stream = require('ls-stream')
+  , ls = require('ls-stream')
 
 function load_odb(fs, dir, find_oid, backends, ready) {
   var pending_backends = []
