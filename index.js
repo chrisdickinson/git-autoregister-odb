@@ -14,7 +14,7 @@ function load_odb(fs, dir, find_oid, backends, ready) {
     for(var i = 0, len = backends.length; i < len; ++i) {
       if(backends[i].accept(entry.path)) {
         pending_backends[pending_backends.length] = {
-            path: entry.path
+            original: entry
           , backend: backends[i]
         }
         break 
@@ -37,7 +37,7 @@ function load_odb(fs, dir, find_oid, backends, ready) {
     return 
 
     function entry(idx) {
-      pending_backends[idx].backend(pending_backends[idx].path, fs, find_oid, done)
+      pending_backends[idx].backend(pending_backends[idx].original, fs, find_oid, done)
 
       function done(err, backend) {
         if(err) {
