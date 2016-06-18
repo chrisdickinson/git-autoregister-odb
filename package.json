@@ -1,6 +1,6 @@
 {
   "name": "git-autoregister-odb",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "autoregister git object databases",
   "main": "index.js",
   "devDependencies": {},
