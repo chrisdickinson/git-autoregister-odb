@@ -20,6 +20,6 @@
   "license": "MIT",
   "gitHead": "f588ef671ae4d010384a8a3b80c683b9a53455bd",
   "dependencies": {
-    "ls-stream": "0.0.2"
+    "ls-stream": "^1.0.0"
   }
 }
